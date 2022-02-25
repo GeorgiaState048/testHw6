@@ -5,16 +5,17 @@
     </head>
     <body>
         <form method="POST" action="/">
-            <input type="text" name="addShow">
-            <input type="submit" value="Add a Tv Show!">
+            <input type="text" name="comment">
+            <input type="submit" value="Add a Comment">
         </form>
         <form method="POST" action="/">
-            <input type="text" name="deleteShow">
-            <input type="submit" value="Delete a Tv Show!">
+            <input type="text" name="rating">
+            <input type="submit" value="Leave a Rating!">
         </form>
-        <h1>You have {{ num_shows }} saved TV show(s)!</h1>
-        {% for i in range(num_shows) %}
-            <p><b>{{data[i].tvshow}}</b></p>
-        {% endfor %}
+        <h1>Look below and you will see comments and ratings</h1>
+        <p><b>{{movie_id}}</b></p>
+        {% for i in range(num_data) %}
+            <p><b>{{data[i].comment}}</b></p>
+        {%endfor%}
     </body> 
 </html>
